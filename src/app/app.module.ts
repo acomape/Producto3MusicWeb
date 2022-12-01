@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModel } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import {MatCardModule} from '@angular/material/card';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { PlaySongComponent } from './play-song/play-song.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 
 
@@ -42,7 +44,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     ReproductorComponent,
     TextFilterComponent,
-    PlaySongComponent
+    PlaySongComponent,
 
 
   ],
@@ -58,10 +60,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatIconModule,
     MatTableModule,
     MatButtonModule,
+    MatCardModule,
+    MatProgressBarModule,
     APP_ROUTING
 
   ],
-  exports: [MatSliderModule],
+  exports: [MatSliderModule, MatCardModule],
   providers: [
     CancionesService,
     ServicioReproducirCancion

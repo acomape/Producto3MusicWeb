@@ -41,7 +41,7 @@ export class CancionesService {
       fecha: "2022",
       album: "Un Verano sin ti",
       url: "assets/unveranosinti.mp3",
-      description:"El latineo de Bad Bunny por excelencia",
+      description:"El latineo de Bad Bunny por excelencia. La que pone nombre a su album.",
       duration:"02:28",
     },
     {

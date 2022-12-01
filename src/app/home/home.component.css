@@ -28,7 +28,7 @@
 }
 
 .Body { grid-area: Body;
-  background-color: rgb(193, 193, 193);
+  background-color: rgb(255, 255, 255);
 }
 
 .Footer { grid-area: Footer;

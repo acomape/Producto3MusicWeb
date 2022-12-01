@@ -1,3 +1,4 @@
 <div class="reproducer__track__bar">
     <mat-slider min="0" max="100" step="0.5" [(ngModel)]="valuePlayedTime" (change)="percentToSeconds($event)"></mat-slider>
+    <mat-progress-bar value="100" min="0" max="100" step="0.5" [(ngModel)]="valuePlayedTime" (change)="percentToSeconds($event)"></mat-progress-bar>
 </div>

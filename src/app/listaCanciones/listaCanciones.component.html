@@ -5,7 +5,7 @@
     <p>Disco: <b>Tercer Disco</b></p>
     <p>Estilo: <b>Rock</b></p>
 </div> -->
-
+<!--
 <div class="card" *ngFor=" let cancion of canciones;" style="width: 30%;">
   <img class="card-img-top"  [src]="cancion.img" style="border-radius: 50%;" [alt]="cancion.titulo">
   <div class="card-body">
@@ -13,11 +13,29 @@
     <p class="card-text">{{ cancion.artista }}</p>
   </div>
   <div class="card-body">
-    <!-- <button class="btn btn-sm btn-outline" routerLink="/detalles/{{cancion.id}}">Ver Detalles</button> -->
     <button class="btn " (click)="verDetalle(cancion.id)"><span>Detalles </span></button>
     <button class="btn " (click)="reproducirCancion(cancion.id)"><span>Reproducir </span></button>
   </div>
-</div>
+</div> -->
+
+
+<mat-card class="card" *ngFor=" let cancion of canciones;" style="width: 30%;">
+  <mat-card-header>
+    <mat-card-title>{{ cancion.artista }}</mat-card-title>
+    <mat-card-subtitle>{{ cancion.titulo }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="cancion.img" alt="Foto">
+  <mat-card-content>
+    <p>
+      {{ cancion.description }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="verDetalle(cancion.id)"><span>Detalles </span></button>
+    <button mat-raised-button (click)="reproducirCancion(cancion.id)"><span>Reproducir </span></button>
+  </mat-card-actions>
+</mat-card>
+
 
 
 <!-- <ul class="list-group list-group-flush">
