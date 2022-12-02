@@ -24,17 +24,18 @@
     <mat-card-title>{{ cancion.artista }}</mat-card-title>
     <mat-card-subtitle>{{ cancion.titulo }}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image [src]="cancion.img" alt="Foto">
+  <img mat-card-image [src]="cancion.img" style=" border: 5px solid #39ABA2; border-radius: 50%;" srcset="" width = "200" height="300" alt="Foto">
   <mat-card-content>
     <p>
       {{ cancion.description }}
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button (click)="verDetalle(cancion.id)"><span>Detalles </span></button>
-    <button mat-raised-button (click)="reproducirCancion(cancion.id)"><span>Reproducir </span></button>
+    <button mat-raised-button style="color: #39ABA2;" (click)="verDetalle(cancion.id)"><span>Detalles </span></button>
+    <button mat-raised-button style="color: #39ABA2;" (click)="reproducirCancion(cancion.id)"><span>Reproducir </span></button>
   </mat-card-actions>
 </mat-card>
+
 
 
 

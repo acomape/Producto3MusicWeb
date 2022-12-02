@@ -10,6 +10,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class TextFilterComponent implements OnInit {
 
+
   resultadoBusqueda:any;
   resultadoFiltro:any;
   resultadoArtista:any;

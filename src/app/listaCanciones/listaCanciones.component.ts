@@ -4,6 +4,7 @@ import { ServicioVerDetalleService } from "../servicio-ver-detalle.service";
 import { ServicioReproducirCancion } from '../servicios/servicio-reproducir-cancion.service';
 import { FiltrosServicioService } from '../filtros-servicio.service';
 import {MatCardModule} from '@angular/material/card';
+import {MatListModule} from '@angular/material/list';
 
 
 
