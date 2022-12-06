@@ -19,7 +19,11 @@
 </div> -->
 
 
-<mat-card class="card" *ngFor=" let cancion of canciones;" style="width: 30%;">
+<h3>Busca tu canción o artista favorito:</h3>
+<input type="text" class="form-control" name="filtroCanciones" placeholder="..." [(ngModel)]="filtroCanciones">
+
+
+<mat-card class="card" *ngFor=" let cancion of canciones | filtro:filtroCanciones" style="width: 30%;">
   <mat-card-header>
     <mat-card-title>{{ cancion.artista }}</mat-card-title>
     <mat-card-subtitle>{{ cancion.titulo }}</mat-card-subtitle>
@@ -36,7 +40,15 @@
   </mat-card-actions>
 </mat-card>
 
-
+<h3>Three line lists</h3>
+<mat-list class="list"  *ngFor=" let cancion of canciones;">
+  <mat-list-item>
+    <mat-icon>home</mat-icon>
+    <h3 matListItemTitle>{{ cancion.artista }}</h3><br>
+    <h5 matListItemLine>{{ cancion.titulo }}</h5><br>
+    <p matListItemLine>{{ cancion.estilo }}</p><br>
+  </mat-list-item>
+</mat-list>
 
 
 <!-- <ul class="list-group list-group-flush">

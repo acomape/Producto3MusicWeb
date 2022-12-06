@@ -20,6 +20,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { PlaySongComponent } from './play-song/play-song.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { FiltroCancionesPipe } from './pipe/filtro.pipe';
 
 
 
@@ -45,6 +46,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReproductorComponent,
     TextFilterComponent,
     PlaySongComponent,
+    FiltroCancionesPipe,
+
 
 
   ],

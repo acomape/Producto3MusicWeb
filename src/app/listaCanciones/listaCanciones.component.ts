@@ -5,6 +5,8 @@ import { ServicioReproducirCancion } from '../servicios/servicio-reproducir-canc
 import { FiltrosServicioService } from '../filtros-servicio.service';
 import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
+import { FormGroup, FormControl } from '@angular/forms';
+import { Pipe, PipeTransform } from "@angular/core";
 
 
 
@@ -18,6 +20,9 @@ export class CancionComponent implements OnInit {
 
   canciones: Cancion[] = [];
   cancion: Cancion | undefined;
+
+  filtroCanciones = '';
+
   constructor(private _cancionesService: CancionesService,
     private filtrosServicio: FiltrosServicioService,
     private servicioDetalle: ServicioVerDetalleService,
