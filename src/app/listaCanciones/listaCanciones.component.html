@@ -1,6 +1,5 @@
 
-<h3>Busca tu canción o artista favorito:</h3>
-<input type="text" class="form-control" name="filtroCanciones" placeholder="..." [(ngModel)]="filtroCanciones">
+
 
 
 <!-- <mat-card class="card" *ngFor=" let cancion of canciones | filtro:filtroCanciones" style="width: 30%;">
@@ -20,11 +19,8 @@
   </mat-card-actions>
 </mat-card> -->
 
-
-
-
-
-
+<h3>Busca tu canción o artista favorito:</h3>
+<input type="text" class="form-control" name="filtroCanciones" placeholder="..." [(ngModel)]="filtroCanciones">
 
 <mat-nav-list class="text-left">
   <mat-list-item *ngFor=" let cancion of canciones | filtro:filtroCanciones" (click)="verDetalle(cancion.id)">
