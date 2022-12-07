@@ -1,29 +1,9 @@
-<!-- <div class="song-container">
-    <h2 class="song-title">Componente Canción</h2>
-    <p>Autor: <b>Juan Pérez</b></p>
-    <p>Año: <b>2022</b></p>
-    <p>Disco: <b>Tercer Disco</b></p>
-    <p>Estilo: <b>Rock</b></p>
-</div> -->
-<!--
-<div class="card" *ngFor=" let cancion of canciones;" style="width: 30%;">
-  <img class="card-img-top"  [src]="cancion.img" style="border-radius: 50%;" [alt]="cancion.titulo">
-  <div class="card-body">
-    <h5 class="card-title">{{ cancion.titulo }}</h5>
-    <p class="card-text">{{ cancion.artista }}</p>
-  </div>
-  <div class="card-body">
-    <button class="btn " (click)="verDetalle(cancion.id)"><span>Detalles </span></button>
-    <button class="btn " (click)="reproducirCancion(cancion.id)"><span>Reproducir </span></button>
-  </div>
-</div> -->
-
 
 <h3>Busca tu canción o artista favorito:</h3>
 <input type="text" class="form-control" name="filtroCanciones" placeholder="..." [(ngModel)]="filtroCanciones">
 
 
-<mat-card class="card" *ngFor=" let cancion of canciones | filtro:filtroCanciones" style="width: 30%;">
+<!-- <mat-card class="card" *ngFor=" let cancion of canciones | filtro:filtroCanciones" style="width: 30%;">
   <mat-card-header>
     <mat-card-title>{{ cancion.artista }}</mat-card-title>
     <mat-card-subtitle>{{ cancion.titulo }}</mat-card-subtitle>
@@ -38,21 +18,21 @@
     <button mat-raised-button style="color: #39ABA2;" (click)="verDetalle(cancion.id)"><span>Detalles </span></button>
     <button mat-raised-button style="color: #39ABA2;" (click)="reproducirCancion(cancion.id)"><span>Reproducir </span></button>
   </mat-card-actions>
-</mat-card>
+</mat-card> -->
 
-<h3>Three line lists</h3>
-<mat-list class="list"  *ngFor=" let cancion of canciones;">
-  <mat-list-item>
-    <mat-icon>home</mat-icon>
-    <h3 matListItemTitle>{{ cancion.artista }}</h3><br>
-    <h5 matListItemLine>{{ cancion.titulo }}</h5><br>
-    <p matListItemLine>{{ cancion.estilo }}</p><br>
+
+
+
+
+
+
+<mat-nav-list class="text-left">
+  <mat-list-item *ngFor=" let cancion of canciones | filtro:filtroCanciones" (click)="verDetalle(cancion.id)">
+    <div matLine style="margin-left:70px"><img matLine [src]="cancion.img" style=" border: 2px solid #39ABA2; border-radius: 50%;" alt="" width="70px" height="70px"></div>
+      <div matLine style="margin-left:70px" id="title" >{{cancion.titulo}}<span><button mat-raised-button style="border: 2px solid #39ABA2 !important; border-radius: 5% !important;  color: #39ABA2; float:right;" (click)="reproducirCancion(cancion.id)"><span>Reproducir </span></button></span></div>
+      <div matLine style="margin-left:70px" id="artist" >{{cancion.artista}}</div>
+      <div matLine style="margin-left:70px" id="artist" >
+</div>
+
   </mat-list-item>
-</mat-list>
-
-
-<!-- <ul class="list-group list-group-flush">
-  <li class="list-group-item">Estilo:{{ cancion.estilo }}</li>
-  <li class="list-group-item">Año: {{ cancion.fecha }}</li>
-  <li class="list-group-item">Album: {{ cancion.album }}</li>
-</ul> -->
+</mat-nav-list>

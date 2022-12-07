@@ -11,10 +11,12 @@ import { Pipe, PipeTransform } from "@angular/core";
 
 
 
+
 @Component({
   selector: 'app-listaCanciones',
   templateUrl: './listaCanciones.component.html',
-  styleUrls: ['./listaCanciones.component.css']
+  styleUrls: ['./listaCanciones.component.css'],
+
 })
 export class CancionComponent implements OnInit {
 

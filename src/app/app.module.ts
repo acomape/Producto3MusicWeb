@@ -21,6 +21,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { PlaySongComponent } from './play-song/play-song.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { FiltroCancionesPipe } from './pipe/filtro.pipe';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -65,6 +66,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,
     MatCardModule,
     MatProgressBarModule,
+    CommonModule,
     APP_ROUTING
 
   ],
