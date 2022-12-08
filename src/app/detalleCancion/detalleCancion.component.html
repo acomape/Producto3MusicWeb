@@ -1,25 +1,4 @@
-<!-- <div class="container" style="margin:15px" *ngIf="cancion">
-  <h1>{{cancion.titulo}}</h1><small>{{cancion.artista}}</small>
-<hr>
-  <div class="row">
 
-    <div class="col-md-4">
-
-      <img src={{cancion.img}} class="img-fluid" alt="">
-      <br><br>
-
-    </div>
-
-    <div class="col -md-8">
-      <h3>Album: {{cancion.album}}</h3>
-      <hr>
-      <p>Fecha:{{cancion.fecha}}</p>
-      <p>Estilo: {{cancion.estilo}}</p>
-      <button class="btn btn-sm btn-outline-danger" (click)="goHome()">Volver</button>
-
-    </div>
-  </div>
-</div> -->
 
 <!-- <h2>Detalles</h2>
 <div class="container" *ngIf="cancion">
@@ -38,8 +17,8 @@
 
 </div> -->
 
-<mat-list *ngIf="cancion">
-  <!-- <img [src]="cancion.img" style=" border: 2px solid #39ABA2; border-radius: 50%; justify-content: center; " alt="" srcset="" width="150"> -->
+<!-- <mat-list *ngIf="cancion">
+  <img [src]="cancion.img" style=" border: 2px solid #39ABA2; border-radius: 50%; justify-content: center; " alt="" srcset="" width="150">
   <h3 matSubheader>Artista:</h3>
   <mat-list-item>
      <mat-icon></mat-icon>
@@ -75,4 +54,41 @@
      <mat-icon matListIcon></mat-icon>
      <h4 matListItemTitle>{{cancion.description}}</h4>
   </mat-list-item>
-</mat-list>
+</mat-list> -->
+
+<mat-card class="card" *ngIf="cancion">
+  <mat-card-header>
+  </mat-card-header>
+  <img mat-card-image class="img" [src]="cancion.img" style="border: 5px solid #39ABA2; border-radius: 50%;" srcset="" alt="Foto">
+  <mat-card-content>
+    <h3 matSubheader style="font-weight: bold;">Canción:</h3>
+    <p>
+      {{ cancion.titulo }}
+    </p>
+    <mat-divider></mat-divider>
+    <h3 matSubheader style="font-weight: bold;">Artista:</h3>
+    <p>
+      {{ cancion.artista }}
+    </p>
+    <mat-divider></mat-divider>
+    <h3 matSubheader style="font-weight: bold;">Album:</h3>
+    <p>
+      {{ cancion.album }}
+    </p>
+    <mat-divider></mat-divider>
+    <h3 matSubheader style="font-weight: bold;">Estilo:</h3>
+    <p>
+      {{ cancion.estilo }}
+    </p>
+    <mat-divider></mat-divider>
+    <h3 matSubheader style="font-weight: bold;">Fecha:</h3>
+    <p>
+      {{ cancion.fecha }}
+    </p>
+    <mat-divider></mat-divider>
+    <h3 matSubheader style="font-weight: bold;">Descripción:</h3>
+    <p>
+      {{ cancion.description }}
+    </p>
+  </mat-card-content>
+</mat-card>

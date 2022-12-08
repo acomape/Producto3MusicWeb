@@ -33,7 +33,6 @@ export class ReproductorComponent implements OnInit {
 
     this.valuePlayedTime = '00:00';
     this.reproducirCancion.reproducirCancionTrigger.subscribe(data => {
-      console.log("Recibiendo dat...a", data);
       this.cancion = data;
       this.player.pause();
       if (this.cancion) {
@@ -55,7 +54,6 @@ export class ReproductorComponent implements OnInit {
     if(this.audio){
       this.audio.play();
       this.interval = setInterval(function () {
-        //do nothing. this just keeps the bar refreshing
       }, 1000);
     }
     console.log("PLAY");
@@ -66,7 +64,7 @@ export class ReproductorComponent implements OnInit {
       clearInterval(this.interval);
       this.audio.pause();
     }
-    console.log("PAUSE");
+    console.log("Pausa");
   }
 
   stopSong() {
@@ -75,12 +73,6 @@ export class ReproductorComponent implements OnInit {
     this.audio.src = this.cancion!.url;
   }
 
-  prevSong() {
-    console.log("PREV");
-  }
-  nextSong() {
-    console.log("NEXT");
-  }
 
   toHumanTime(length: number) {
     var minutes = Math.floor(length / 60),

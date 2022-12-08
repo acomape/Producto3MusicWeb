@@ -7,7 +7,8 @@ import { Cancion, CancionesService } from '../servicios/canciones.service';
 
 @Component ({
   selector: 'app-detalleCancion',
-  templateUrl: './detalleCancion.component.html'
+  templateUrl: './detalleCancion.component.html',
+  styleUrls: ['./detalleCancion.component.css']
 })
 
 export class detalleCancionComponent {
@@ -27,7 +28,7 @@ export class detalleCancionComponent {
     }
 
     ngOnInit() {
-    
+
       this.servicioDetalle.disparadorDetalle.subscribe(data => {
         this.cancion = data;
       })
