@@ -27,13 +27,13 @@
       <!-- <mat-icon class="material-icons" (click)="nextSong()"> skip_next </mat-icon> -->
   </div>
 
-  <div *ngIf="cancion; else noSongSelected" class="BarrayTiempo">
+  <div *ngIf="cancion; else noSongSelected" class="BarrayTiempo d-flex justify-content-between">
       <div class="timePlayed">
           <input (focus)="pauseSong()" type="text" placeholder="{{valuePlayedTime}}" name="timePlayed"
               [(ngModel)]="valuePlayedTime" value="{{audio ? toHumanTime(audio.currentTime) : 0}}" (keyup)="changeCurrentTime()">
       </div>
       <!-- -->
-      <app-play-song class="trackLenght" (refreshTimePlayed)="refreshTimePlayed($event)"
+      <app-play-song class="trackLenght align-items-center mt-1 d-flex" (refreshTimePlayed)="refreshTimePlayed($event)"
           [valuePlayedTime]=" audio ? toPercent(toHumanTime(audio.currentTime)) : 0" [cancion]="cancion" [audio]="audio">
       </app-play-song>
       <div class="cancionDuracion">{{cancion ? cancion!.duration : '00:00'}}</div>

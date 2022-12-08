@@ -82,4 +82,26 @@
     width: 180%;
 }
 
+.trackLenght {
+    width: 100%;
+}
 
+.reproducer__track__bar
+{
+    width: 100% !important;
+    margin: 0 !important;
+}
+.trackLenght .reproducer__track__bar .mat-slider-wrapper {
+    width: 100%;
+}
+
+
+.BarrayTiempo {
+    margin-top: 20px;
+}
+
+.BarrayTiempo input {
+    max-width: 50px;
+    border: none;
+    color: darkgray;
+}
