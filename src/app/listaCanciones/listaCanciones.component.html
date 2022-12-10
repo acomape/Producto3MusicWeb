@@ -19,8 +19,16 @@
   </mat-card-actions>
 </mat-card> -->
 
-<h3 class="h3">Busca tu canción o artista favorito:</h3>
-<input type="text" class="form-control" name="filtroCanciones" placeholder="..." [(ngModel)]="filtroCanciones">
+<!-- <h3 class="h3">Busca tu canción o artista favorito:</h3>
+<input matInput type="text" class="form-control" name="filtroCanciones" placeholder="..." [(ngModel)]="filtroCanciones"> -->
+
+<mat-form-field class="filtro">
+  <mat-label>Busca tu canción o artista favorito:</mat-label>
+  <input matInput type="text" class="form-control" name="filtroCanciones" placeholder="..." [(ngModel)]="filtroCanciones">
+  <button *ngIf="filtroCanciones" matSuffix mat-icon-button aria-label="Clear" (click)="filtroCanciones=''">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
 
 <mat-nav-list class="text-left">
   <mat-list-item *ngFor=" let cancion of canciones | filtro:filtroCanciones" (click)="verDetalle(cancion.id)">

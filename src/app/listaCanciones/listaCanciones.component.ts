@@ -22,6 +22,7 @@ export class CancionComponent implements OnInit {
 
   canciones: Cancion[] = [];
   cancion: Cancion | undefined;
+  value = 'filtroCanciones';
 
   filtroCanciones = '';
 
