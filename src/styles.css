@@ -4,3 +4,8 @@ body {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Arial, Helvetica, sans-serif; font-stretch: expanded; }
+
+.form-control:focus{
+    border-color: none;
+    box-shadow: none;
+}

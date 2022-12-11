@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModel } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -53,8 +54,6 @@ import { DetalleCancionFormComponent } from './detalleCancion-form/detalleCancio
     FiltroCancionesPipe,
     DetalleCancionFormComponent,
 
-
-
   ],
   imports: [
     BrowserModule,
@@ -73,6 +72,7 @@ import { DetalleCancionFormComponent } from './detalleCancion-form/detalleCancio
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
+    BrowserAnimationsModule,
     APP_ROUTING
 
   ],

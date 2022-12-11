@@ -11,17 +11,18 @@
         <button class="btn btn btn-outline" type="submit" style="margin: 5px; color: #39ABA2;">Buscar</button>
     </mat-form> -->
 
-    <mat-form name = "style-filter-form" [formGroup]="styleFilter" (ngSubmit)="filtroEstilos()">
-        <label for="" style="padding: 3px;">Selecciona un estilo</label>
-        <select class="btn" style="border: 2px solid #39ABA2 ;" type="" name="estilos" id="style" formControlName="estilo">
-          <option value="Todas">Mostrar todo</option>
-          <option value="Electrónica">Electrónica</option>
-          <option value="Pop">Pop</option>
-          <option value="Alternativa">Alternativa</option>
-        </select>
-        <input class="btn btn" type="button" style="margin: 5px; color: #39ABA2;" (click)="filtroEstilos()" value="Filtrar" />
-    </mat-form>
 
+
+    <mat-form-field name = "style-filter-form" appearance="fill" [formGroup]="styleFilter" (ngSubmit)="filtroEstilos()">
+        <mat-label>Selecciona un estilo</mat-label>
+        <select matNativeControl name="estilos" id="style" formControlName="estilo">
+            <option value="Todas">Mostrar todo</option>
+            <option value="Electrónica">Electrónica</option>
+            <option value="Pop">Pop</option>
+            <option value="Alternativa">Alternativa</option>
+        </select>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="filtroEstilos()" value="Filtrar">Filtrar</button>
 
 
 </div>

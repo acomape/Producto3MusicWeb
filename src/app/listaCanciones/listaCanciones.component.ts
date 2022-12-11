@@ -16,7 +16,6 @@ import { Pipe, PipeTransform } from "@angular/core";
   selector: 'app-listaCanciones',
   templateUrl: './listaCanciones.component.html',
   styleUrls: ['./listaCanciones.component.css'],
-
 })
 export class CancionComponent implements OnInit {
 
@@ -70,6 +69,8 @@ export class CancionComponent implements OnInit {
   }
 
   public getCancionesFiltradasEstilo(estilo: string) {
+
+    console.log("ENTRA AQUI")
 
     switch (estilo) {
       case "Electrónica":

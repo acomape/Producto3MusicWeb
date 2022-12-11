@@ -18,24 +18,21 @@
   </div>
 
   <div class="reproductor__controles">
-      <!-- ESTOS OTROS ICONOS ESTAN COMENTADOS PORQUE NO SON LOS REQUISITOS DEL ENUNCIADO. SI HAY TIEMPO LOS CONFIGURAMOS TAMBIÉN -->
-      <!-- <mat-icon class="material-icons"> shuffle </mat-icon>  -->
-      <!-- <mat-icon class="material-icons" (click)="prevSong()"> skip_previous </mat-icon> -->
       <mat-icon class="material-icons" (click)="stopSong()">crop_din</mat-icon>
       <mat-icon class="material-icons" (click)="playSong()">play_circle_outline</mat-icon>
       <mat-icon class="material-icons" (click)="pauseSong()">pause_circle_outline</mat-icon>
-      <!-- <mat-icon class="material-icons" (click)="nextSong()"> skip_next </mat-icon> -->
   </div>
 
-  <div *ngIf="cancion; else noSongSelected" class="BarrayTiempo d-flex justify-content-between">
+  <div *ngIf="cancion; else noSongSelected" class="BarrayTiempo d-flex justify-content-between align-items-center gap-2">
       <div class="timePlayed">
           <input (focus)="pauseSong()" type="text" placeholder="{{valuePlayedTime}}" name="timePlayed"
               [(ngModel)]="valuePlayedTime" value="{{audio ? toHumanTime(audio.currentTime) : 0}}" (keyup)="changeCurrentTime()">
       </div>
       <!-- -->
-      <app-play-song class="trackLenght align-items-center mt-1 d-flex" (refreshTimePlayed)="refreshTimePlayed($event)"
+      <!-- <app-play-song class="trackLenght align-items-center mt-1 d-flex" (refreshTimePlayed)="refreshTimePlayed($event)"
           [valuePlayedTime]=" audio ? toPercent(toHumanTime(audio.currentTime)) : 0" [cancion]="cancion" [audio]="audio">
-      </app-play-song>
+      </app-play-song> -->
+      <mat-progress-bar mode="determinate" color="#39ABA2" value= " {{audio ? toPercent(toHumanTime(audio.currentTime)) : 0}}"></mat-progress-bar>
       <div class="cancionDuracion">{{cancion ? cancion!.duration : '00:00'}}</div>
   </div>
 
