@@ -56,6 +56,62 @@
   </mat-list-item>
 </mat-list> -->
 
+
+
+<mat-card class="example-card" *ngIf="cancion">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Detalles de la canción</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image class="img" [src]="cancion.img" style="border: 5px solid #39ABA2; border-radius: 50%;" srcset="" alt="Foto">
+  <mat-card-content>
+    <p >
+      <mat-form-field appearance="fill">
+        <mat-label>Artista</mat-label>
+        <input matInput placeholder="" value="{{ cancion.artista }}" readonly="">
+        <mat-icon matSuffix>face</mat-icon>
+      </mat-form-field>
+    </p>
+    <p >
+      <mat-form-field appearance="fill">
+        <mat-label>Canción</mat-label>
+        <input matInput placeholder="" value="{{ cancion.titulo }}" readonly="">
+        <mat-icon matSuffix>book</mat-icon>
+      </mat-form-field>
+    </p>
+    <p >
+      <mat-form-field appearance="fill">
+        <mat-label>Álbum</mat-label>
+        <input matInput placeholder="" value="{{ cancion.album }}" readonly="">
+        <mat-icon matSuffix>album</mat-icon>
+      </mat-form-field>
+    </p>
+    <p >
+      <mat-form-field appearance="fill">
+        <mat-label>Estilo</mat-label>
+        <input matInput placeholder="" value="{{ cancion.estilo }}" readonly="">
+        <mat-icon matSuffix>mic</mat-icon>
+      </mat-form-field>
+    </p>
+    <p >
+      <mat-form-field appearance="fill">
+        <mat-label>Fecha</mat-label>
+        <input matInput placeholder="" value="{{ cancion.fecha }}" readonly="">
+        <mat-icon matSuffix>today</mat-icon>
+      </mat-form-field>
+    </p>
+    <p >
+      <mat-form-field appearance="fill" class="example-full-width">
+        <mat-label>Descripción</mat-label>
+        <textarea matInput readonly="">{{ cancion.description }}</textarea>
+      </mat-form-field>
+    </p>
+  </mat-card-content>
+</mat-card>
+
+<!-- 
+
+
 <mat-card class="card" *ngIf="cancion">
   <mat-card-header>
   </mat-card-header>
@@ -93,7 +149,50 @@
   </mat-card-content>
 </mat-card><br><br>
 
-<mat-label class="label" *ngIf="cancion">
+<div *ngIf="cancion">
+  <p >
+    <mat-form-field appearance="fill">
+      <mat-label>Artista</mat-label>
+      <input matInput placeholder="" value="{{ cancion.artista }}" readonly="">
+      <mat-icon matSuffix>face</mat-icon>
+    </mat-form-field>
+  </p>
+  <p >
+    <mat-form-field appearance="fill">
+      <mat-label>Canción</mat-label>
+      <input matInput placeholder="" value="{{ cancion.titulo }}" readonly="">
+      <mat-icon matSuffix>book</mat-icon>
+    </mat-form-field>
+  </p>
+  <p >
+    <mat-form-field appearance="fill">
+      <mat-label>Álbum</mat-label>
+      <input matInput placeholder="" value="{{ cancion.album }}" readonly="">
+      <mat-icon matSuffix>album</mat-icon>
+    </mat-form-field>
+  </p>
+  <p >
+    <mat-form-field appearance="fill">
+      <mat-label>Estilo</mat-label>
+      <input matInput placeholder="" value="{{ cancion.estilo }}" readonly="">
+      <mat-icon matSuffix>mic</mat-icon>
+    </mat-form-field>
+  </p>
+  <p >
+    <mat-form-field appearance="fill">
+      <mat-label>Fecha</mat-label>
+      <input matInput placeholder="" value="{{ cancion.fecha }}" readonly="">
+      <mat-icon matSuffix>today</mat-icon>
+    </mat-form-field>
+  </p>
+  <p >
+    <mat-form-field appearance="fill" class="example-full-width">
+      <mat-label>Descripción</mat-label>
+      <textarea matInput readonly="">{{ cancion.description }}</textarea>
+    </mat-form-field>
+  </p>
+</div>
+ <mat-label class="label" *ngIf="cancion">
   <h3 matSubheader style="font-weight: bold;">Form</h3>
   <div class="formulario">
     <h4 matSubheader style="font-weight: bold;">Artista:</h4>
@@ -122,7 +221,7 @@
     <mat-divider></mat-divider><br>
     <h4 matSubheader style="font-weight: bold;">Fecha:</h4>
     <mat-form-field hintLabel="Fecha Publicación" appearance="fill">
-      <input matInput  id="fecha" type="text" [formControl]="fecha" placeholder="{{cancion.fecha}}">
+      <input matInput id="fecha" type="text" [formControl]="fecha" placeholder="{{cancion.fecha}}" [disabled]=true>
     </mat-form-field><br>
     <button mat-button type="button" (click)="updateFecha()">Guardar Fecha</button><br><br>
     <mat-divider></mat-divider><br>
@@ -130,3 +229,4 @@
   </div>
 
 </mat-label>
+-->

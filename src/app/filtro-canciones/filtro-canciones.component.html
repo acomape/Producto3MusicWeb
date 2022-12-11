@@ -1,18 +1,6 @@
 
 <div class="text-filter">
-    <!-- <h2>Filtros</h2>
-    <mat-form name = "text-filter-form" [formGroup]="textFilter" (ngSubmit)="filtroTexto()" class="formularioTexto" >
-        <input type="text" class="form-control" placeholder="Busca una canción..." formControlName="texto">
-        <button class="btn btn btn-outline" type="submit" style="margin: 5px; color: #39ABA2;">Buscar</button>
-    </mat-form>
-
-    <mat-form name = "artista-filter-form" [formGroup]="artistFilter" (ngSubmit)="filtroArtista()" class="formularioTexto" >
-        <input type="text" class="form-control" placeholder="Busca un artista..." formControlName="artista">
-        <button class="btn btn btn-outline" type="submit" style="margin: 5px; color: #39ABA2;">Buscar</button>
-    </mat-form> -->
-
-
-
+    <h4>Filtrar por estilos:</h4>
     <mat-form-field name = "style-filter-form" appearance="fill" [formGroup]="styleFilter" (ngSubmit)="filtroEstilos()">
         <mat-label>Selecciona un estilo</mat-label>
         <select matNativeControl name="estilos" id="style" formControlName="estilo">
