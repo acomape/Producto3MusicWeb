@@ -22,6 +22,8 @@ import { PlaySongComponent } from './play-song/play-song.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { FiltroCancionesPipe } from './pipe/filtro.pipe';
 import { CommonModule } from '@angular/common';
+import {FormControl, Validators} from '@angular/forms';
+
 
 
 
@@ -35,6 +37,7 @@ import { detalleCancionComponent } from './detalleCancion/detalleCancion.compone
 import { APP_ROUTING } from './app.routes';
 import { TextFilterComponent } from './filtro-canciones/filtro-canciones.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DetalleCancionFormComponent } from './detalleCancion-form/detalleCancion-form.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +51,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     TextFilterComponent,
     PlaySongComponent,
     FiltroCancionesPipe,
+    DetalleCancionFormComponent,
 
 
 
@@ -67,6 +71,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatCardModule,
     MatProgressBarModule,
     CommonModule,
+    ReactiveFormsModule,
+    FormsModule,
     APP_ROUTING
 
   ],

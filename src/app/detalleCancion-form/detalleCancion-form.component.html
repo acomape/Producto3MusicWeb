@@ -1,0 +1,27 @@
+<form [formGroup]="form" (ngSubmit)="save($event)">
+  <p>
+    Artista: <br/>
+    <input type="text" formControlName="artista">
+  </p>
+  <p>
+    Titulo: <br/>
+    <input type="text" formControlName="titulo">
+  </p>
+  <p>
+    Album: <br/>
+    <input type="text" formControlName="album">
+  </p>
+  <p>
+    Fecha: <br/>
+    <input type="number" formControlName="fecha">
+  </p>
+
+  <p>
+    Estilo: <br/>
+    <input type="radio" name="estilo" formControlName="estilo" value="pop"> Pop<br>
+    <input type="radio" name="estilo" formControlName="estilo" value="electronica"> Electrónica<br>
+    <input type="radio" name="estilo" formControlName="estilo" value="alternativa"> Alternativa
+  </p>
+
+  <button mat-button type="submit" [disabled]="form.invalid">Guardar</button>
+</form>
