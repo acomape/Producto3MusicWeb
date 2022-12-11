@@ -98,37 +98,32 @@
   <div class="formulario">
     <h4 matSubheader style="font-weight: bold;">Artista:</h4>
     <mat-form-field hintLabel="Artista" appearance="fill">
-      <input matInput id="artista" type="text" [formControl]="artista">
-    </mat-form-field>
-    <p>Value: {{ cancion.artista }}</p>
+      <input matInput id="artista" type="text" [formControl]="artista" placeholder="{{cancion.artista}}">
+    </mat-form-field><br>
     <button mat-button type="button" (click)="getArtista($event)">Guardar Artista</button><br><br>
     <mat-divider></mat-divider><br>
     <h4 matSubheader style="font-weight: bold;">Canción:</h4>
     <mat-form-field hintLabel="Título Canción" appearance="fill">
-      <input matInput  id="titulo" type="text" [formControl]="titulo">
-    </mat-form-field>
-    <p>Value: {{ cancion.titulo }}</p>
+      <input matInput  id="titulo" type="text" [formControl]="titulo" placeholder="{{cancion.titulo}}">
+    </mat-form-field><br>
     <button mat-button type="button" (click)="updateTitulo()">Guardar Titulo</button><br><br>
     <mat-divider></mat-divider><br>
     <h4 matSubheader style="font-weight: bold;">Album:</h4>
     <mat-form-field hintLabel="Album" appearance="fill">
-      <input matInput  id="album" type="text" [formControl]="album">
-    </mat-form-field>
-    <p>Value: {{ cancion.album }}</p>
+      <input matInput  id="album" type="text" [formControl]="album" placeholder="{{cancion.album}}">
+    </mat-form-field><br>
     <button mat-button type="button" (click)="updateAlbum()">Guardar Album</button><br><br>
     <mat-divider></mat-divider><br>
     <h4 matSubheader style="font-weight: bold;">Estilo:</h4>
     <mat-form-field hintLabel="Estilo" appearance="fill">
-      <input matInput  id="estilo" type="text" [formControl]="estilo">
-    </mat-form-field>
-    <p>Value: {{ cancion.estilo }}</p>
+      <input matInput  id="estilo" type="text" [formControl]="estilo" placeholder="{{cancion.estilo}}">
+    </mat-form-field><br>
     <button mat-button type="button" (click)="updateEstilo()">Guardar Estilo</button><br><br>
     <mat-divider></mat-divider><br>
     <h4 matSubheader style="font-weight: bold;">Fecha:</h4>
     <mat-form-field hintLabel="Fecha Publicación" appearance="fill">
-      <input matInput  id="fecha" type="text" [formControl]="fecha">
-    </mat-form-field>
-    <p>Value: {{ cancion.fecha }}</p>
+      <input matInput  id="fecha" type="text" [formControl]="fecha" placeholder="{{cancion.fecha}}">
+    </mat-form-field><br>
     <button mat-button type="button" (click)="updateFecha()">Guardar Fecha</button><br><br>
     <mat-divider></mat-divider><br>
 
